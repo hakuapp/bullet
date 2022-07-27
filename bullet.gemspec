@@ -5,7 +5,7 @@ require "bullet/version"
 
 Gem::Specification.new do |s|
   s.name        = "bullet"
-  s.version     = Bullet::VERSION
+  s.version     = ENV['BULLET_GEM_VERSION'] # Bullet::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Richard Huang"]
   s.email       = ["flyerhzm@gmail.com"]
@@ -24,4 +24,3 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_paths = ["lib"]
 end
-
