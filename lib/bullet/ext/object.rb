@@ -15,6 +15,6 @@ class Object
       return self.send(self.class.primary_key) if self.class.primary_key
     end
 
-    self.id
+    self.id if self.respond_to?(:id)
   end
 end
